@@ -1,5 +1,19 @@
 const currentCityTag = document.querySelector(".current-city");
 let currentCity = localStorage.getItem("city");
+const scrollToTopButton = document.querySelector(".scroll-to-top");
+
+scrollToTopButton.addEventListener("click", () =>{
+  window.scrollTo(0, 0);
+})
+
+document.addEventListener("scroll", () =>{
+  let viewportHeight = window.innerHeight;
+  if (document.documentElement.scrollTop < viewportHeight/2) {
+    scrollToTopButton.style.display = "none";
+  } else {
+    scrollToTopButton.style.display = "block";
+  }
+})
 
 // Daca nu avem oras salvat in localStorage, salvam orasul default, adica Bucuresti.
 if (!currentCity) {

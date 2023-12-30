@@ -63,6 +63,17 @@ header {
   flex: 1;
 }
 
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #dfedf5;
+  border-color: gray;
+}
+
 /* Adaugam stilizarile de mobile. */
 @media (max-width: 576px) {
   .current-weather {
